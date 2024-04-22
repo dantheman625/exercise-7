@@ -1,4 +1,5 @@
 import math
+import tsplib95
 
 # Class representing the environment of the ant colony
 """
@@ -9,11 +10,10 @@ class Environment:
 
         self.rho =rho
         
-        # Initialize the environment topology
-
+        # Initialize the environment topology$
+        self.environment = tsplib95.load('att48-specs/att48.tsp').get_graph()
         # Intialize the pheromone map in the environment
-
-        pass 
+        self.initialize_pheromone_map
 
     # Intialize the pheromone trails in the environment
     def initialize_pheromone_map(self):
